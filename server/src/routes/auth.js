@@ -9,6 +9,7 @@ import { signToken, setAuthCookie, clearAuthCookie } from '../lib/token.js'
 import { conflict, unauthorized } from '../lib/httpError.js'
 
 export const authRouter = Router()
+//authentication
 
 authRouter.post(
   '/signup',
