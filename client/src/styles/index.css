@@ -1,0 +1,54 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-parchment: #efe9d5;
+  --color-ink: #14110d;
+  --color-mustard: #e8b833;
+  --color-card: #faf6e9;
+  --color-brick: #b4472f;
+
+  --font-display: 'Archivo Black', system-ui, sans-serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: 'Source Serif 4', Georgia, serif;
+
+  /* Hard offset shadow with zero blur — the defining move of the whole look. */
+  --shadow-hard: 4px 4px 0 0 var(--color-ink);
+  --shadow-hard-sm: 2px 2px 0 0 var(--color-ink);
+  --shadow-hard-lg: 6px 6px 0 0 var(--color-ink);
+}
+
+html {
+  background-color: var(--color-parchment);
+  color: var(--color-ink);
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Display type earns its impact from size and tightness, not decoration. */
+.display {
+  font-family: var(--font-display);
+  letter-spacing: -0.03em;
+  line-height: 0.92;
+}
+
+/* The reading column deliberately drops the brutalist outlines: heavy borders
+   around 1500 words of body text fight the one job this page has. */
+.prose-reading {
+  font-family: var(--font-serif);
+  font-size: 1.1875rem;
+  line-height: 1.75;
+  max-width: 68ch;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
