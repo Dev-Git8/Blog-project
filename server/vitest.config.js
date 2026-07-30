@@ -7,5 +7,6 @@ export default defineConfig({
     testTimeout: 20000,
     hookTimeout: 60000,
     setupFiles: ['tests/setup.js'],
+    env: { NODE_ENV: 'test' },
   },
 })
